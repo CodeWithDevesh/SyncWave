@@ -41,7 +41,7 @@ It takes in the device number listed with the --list-devices command
 ```
 
 # Building
-A CMakeLists.txt file is included. You will need gflags and g3log libraries to be already built and installed on your system.
+A CMakeLists.txt file is included. You will need [gflags](https://github.com/gflags/gflags) and [g3log](https://github.com/KjellKod/g3log) libraries to be already built and installed on your system.
 Then build with cmake...
 
 ```sh
