@@ -2,9 +2,7 @@
 This is a simple "windows only" command line tool written in c++ for using multiple playback devices at the save time.
 
 # Installation
-You can download zip files from the release section. Unzip the contents at a suitable location.
-
-You can also add the folder to your path for global access.
+You can download the latest release from the [releases](https://github.com/CodeWithDevesh/SyncWave/releases).
 
 # Usage
 Open the terminal and navigate to the folder where you extracted the files.
@@ -41,11 +39,23 @@ It takes in the device number listed with the --list-devices command
 ```
 
 # Building
-A CMakeLists.txt file is included. You will need [gflags](https://github.com/gflags/gflags) and [g3log](https://github.com/KjellKod/g3log) libraries to be already built and installed on your system.
+A CMakeLists.txt file is included. The project uses [gflags](https://github.com/gflags/gflags) and [g3log](https://github.com/KjellKod/g3log) which i have included with the project.
+
+I have modified the g3log a little bit so other versions may not work.
+
 Then build with cmake...
 
 ```sh
-> cmake -S . -B ./out
-> cd ./out
-> cmake --build
+> mkdir build
+> cd build
+> cmake ..
+> cmake --build .
 ```
+
+For release version use
+
+```sh
+> cmake --build . --config Release
+```
+
+I would prefer you to use only visual studio generator with it as I have only tested it with that and it is also windows only
