@@ -1,4 +1,3 @@
-.vs
-out
-out 2
-syncwave.zip
+build
+g3log-build
+gflags-build
