@@ -1,7 +1,7 @@
 #define MINIAUDIO_IMPLEMENTATION
-#include "common.h"
+#include "common.hpp"
 #include <g3log/logworker.hpp>
-#include <CustomSink.h>
+#include <CustomSink.hpp>
 
 
 bool data = false;

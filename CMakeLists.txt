@@ -34,16 +34,13 @@ endforeach()
 
 
 #Adding the 3rd party libraries to the project tree
-add_subdirectory(${PROJECT_SOURCE_DIR}/gflags
-  ${PROJECT_SOURCE_DIR}/gflags-build
-)
 add_subdirectory(${PROJECT_SOURCE_DIR}/g3log
   ${PROJECT_SOURCE_DIR}/g3log-build
 )
 
 #Finally add the executable and link the libraries
 add_executable(${PROJECT_NAME} ${all_SRCS})
-target_link_libraries(${PROJECT_NAME} PRIVATE gflags g3log)
+target_link_libraries(${PROJECT_NAME} PRIVATE g3log)
 
 
 if(CMAKE_VERSION VERSION_GREATER 3.12)

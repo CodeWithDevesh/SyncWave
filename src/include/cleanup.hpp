@@ -1,5 +1,5 @@
 #pragma once
-#include "miniaudio.h"
+#include "miniaudio.hpp"
 #include <stdlib.h>
 
 class UninitDeviceOnExit {

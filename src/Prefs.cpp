@@ -1,4 +1,4 @@
-#include "common.h"
+#include "common.hpp"
 #include <args.hpp>
 
 CPrefs::CPrefs(int argc, char* argv[], int* result) {
