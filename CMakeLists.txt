@@ -34,8 +34,8 @@ endforeach()
 
 
 #Adding the 3rd party libraries to the project tree
-add_subdirectory(${PROJECT_SOURCE_DIR}/g3log
-  ${PROJECT_SOURCE_DIR}/g3log-build
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/g3log
+  ${PROJECT_BINARY_DIR}/g3log-build
 )
 
 #Finally add the executable and link the libraries

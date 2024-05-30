@@ -39,11 +39,16 @@ It takes in the device number listed with the --list-devices command
 ```
 
 # Building
-A CMakeLists.txt file is included. The project uses [gflags](https://github.com/gflags/gflags) and [g3log](https://github.com/KjellKod/g3log) which i have included with the project.
+The project is built using cmake and MSVC only. 
 
-I have modified the g3log a little bit so other versions may not work.
+The third-party libraries used are-
+- [g3log](https://github.com/KjellKod/g3log)
+- [miniaudio](https://miniaud.io/)
+- [args](https://github.com/Taywee/args)
 
-Then build with cmake...
+All these libraries are already included in the source so you don't need to setup any of them. I have modified the g3log a little bit so other versions may not work.
+
+Build with cmake... 
 
 ```sh
 > mkdir build
