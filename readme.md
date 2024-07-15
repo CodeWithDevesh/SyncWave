@@ -1,5 +1,5 @@
 # SyncWave
-This is a simple "windows only" command line tool written in c++ for using multiple playback devices at the save time.
+This is a simple "windows only" command line tool written in c++ for using multiple playback devices at the same time.
 
 # Installation
 You can download the latest release from the [releases](https://github.com/CodeWithDevesh/SyncWave/releases).
