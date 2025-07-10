@@ -108,9 +108,5 @@ int CPrefs::initDevice(int device) {
 	pDeviceConfig.sampleRate = cDeviceConfig.sampleRate;
 	pDeviceConfig.dataCallback = playback;
 
-	input = malloc(1000 * ma_get_bytes_per_frame(cDeviceConfig.capture.format, cDeviceConfig.capture.channels));
-	pDeviceConfig.pUserData = input;
-	cDeviceConfig.pUserData = input;
-
 	return ALL_OK;
 }
