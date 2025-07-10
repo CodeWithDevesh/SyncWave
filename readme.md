@@ -1,5 +1,9 @@
 # SyncWave
-This is a simple "windows only" command line tool written in c++ for using multiple playback devices at the same time.
+
+Tired of sharing a single earphone during movie night? Wanna jam out with your friend — on separate headphones?
+
+This command-line tool lets you play audio through multiple (two currently😅) playback devices at the same time — yes, including Bluetooth speakers and headphones.
+Perfect for watching movies, listening to music, or just vibing across devices.
 
 # Installation
 You can download the latest release from the [releases](https://github.com/CodeWithDevesh/SyncWave/releases).
@@ -10,8 +14,8 @@ Open the terminal and navigate to the folder where you extracted the files.
 Run with -h flag for help
 
 ```sh
-> cd "path to your folder"
-> ./syncwave.exe -h
+cd "path to your folder"
+./syncwave.exe -h
 
 OPTIONS:
 
@@ -23,7 +27,8 @@ OPTIONS:
 You can use the --list-devices command to list the available devices for playback on your system.
 
 ```sh
-> ./SyncWave.exe --list-devices
+./SyncWave.exe --list-devices
+
 Available Devices
    0: Headphones (Sushi)  -> (default)
    1: TS35505 (HD Audio Driver for Display Audio)
@@ -39,28 +44,26 @@ It takes in the device number listed with the --list-devices command
 ```
 
 # Building
-The project is built using cmake and MSVC only. 
-
 The third-party libraries used are-
-- [g3log](https://github.com/KjellKod/g3log)
-- [miniaudio](https://miniaud.io/)
-- [args](https://github.com/Taywee/args)
+- [spdlog](https://github.com/KjellKod/g3log) (The Logger).
+- [miniaudio](https://miniaud.io/) (The Powerhouse).
+- [args](https://github.com/Taywee/args) (The Argument Parser).
 
-All these libraries are already included in the source so you don't need to setup any of them. I have modified the g3log a little bit so other versions may not work.
+All these libraries are header only and are already included in the source so you don't need to setup any of them.
 
 Build with cmake... 
 
 ```sh
-> mkdir build
-> cd build
-> cmake ..
-> cmake --build .
+mkdir build
+cd build
+cmake ..
+cmake --build .
 ```
 
 For release version use
 
 ```sh
-> cmake --build . --config Release
+cmake --build . --config Release
 ```
 
-I would prefer you to use only visual studio generator with it as I have only tested it with that and it is also windows only
+Again... build on windows only...
