@@ -64,7 +64,7 @@ int main(int argc, char* argv[])
 	}
 
 	SyncWaveContext ctxt{};
-	result = ma_pcm_rb_init(ma_format_f32, 2, 32 * 48000, NULL, NULL, &(ctxt.buffer));
+	result = ma_pcm_rb_init(ma_format_f32, 2, 4 * 48000, NULL, NULL, &(ctxt.buffer));
 	if (result != MA_SUCCESS) {
 		LOG(FATAL) << ("Failed to initialize the buffer.\n");
 		return -1;

@@ -99,6 +99,7 @@ int CPrefs::initDevice(int device) {
 	cDeviceConfig.capture.channels = 2;
 	cDeviceConfig.sampleRate = 44100;
 	cDeviceConfig.dataCallback = loopback;
+	cDeviceConfig.wasapi.noAutoConvertSRC = true;
 
 
 	pDeviceConfig = ma_device_config_init(ma_device_type_playback);
@@ -107,6 +108,7 @@ int CPrefs::initDevice(int device) {
 	pDeviceConfig.playback.channels = cDeviceConfig.capture.channels;
 	pDeviceConfig.sampleRate = cDeviceConfig.sampleRate;
 	pDeviceConfig.dataCallback = playback;
+	pDeviceConfig.wasapi.noAutoConvertSRC = true;
 
 	return ALL_OK;
 }
