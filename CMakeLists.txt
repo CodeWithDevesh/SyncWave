@@ -1,4 +1,4 @@
-﻿cmake_minimum_required(VERSION 3.8)
+﻿cmake_minimum_required(VERSION 3.12)
 
 # Enable Hot Reload for MSVC compilers if supported.
 if(POLICY CMP0141)
@@ -10,10 +10,10 @@ project("SyncWave")
 
 #setting the directories
 include_directories(${PROJECT_SOURCE_DIR}/src)
-include_directories(${PROJECT_SOURCE_DIR}/src/include)
+include_directories(${PROJECT_SOURCE_DIR}/include)
 file(GLOB all_SRCS
-  "${PROJECT_SOURCE_DIR}/src/include/*.h"
-  "${PROJECT_SOURCE_DIR}/src/include/*.hpp"
+  "${PROJECT_SOURCE_DIR}/include/*.h"
+  "${PROJECT_SOURCE_DIR}/include/*.hpp"
   "${PROJECT_SOURCE_DIR}/src/*.cpp"
   "${PROJECT_SOURCE_DIR}/src/*.c"
 )
@@ -33,14 +33,14 @@ foreach(CompilerFlag ${CompilerFlags})
 endforeach()
 
 
-#Adding the 3rd party libraries to the project tree
-add_subdirectory(${PROJECT_SOURCE_DIR}/src/g3log
-  ${PROJECT_BINARY_DIR}/g3log-build
-)
-
 #Finally add the executable and link the libraries
 add_executable(${PROJECT_NAME} ${all_SRCS})
-target_link_libraries(${PROJECT_NAME} PRIVATE g3log)
+
+if (MSVC)
+    target_compile_options(${PROJECT_NAME} PRIVATE /utf-8 )
+else()
+    target_compile_options(${PROJECT_NAME} PRIVATE)
+endif()
 
 
 if(CMAKE_VERSION VERSION_GREATER 3.12)
