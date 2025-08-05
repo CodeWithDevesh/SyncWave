@@ -5,6 +5,8 @@ Tired of sharing a single earphone during movie night? Wanna jam out with your f
 This command-line tool lets you play audio through multiple (two currently😅) playback devices at the same time — yes, including Bluetooth speakers and headphones.
 Perfect for watching movies, listening to music, or just vibing across devices.
 
+This is just the test repo so the code is trash... gonna release the actual code soon. Also this is just one of the features the main project has.
+
 # Installation
 You can download the latest release from the [releases](https://github.com/CodeWithDevesh/SyncWave/releases).
 
